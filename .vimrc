@@ -62,7 +62,7 @@ set wildmenu
 
 " Conditional stuff
 autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd FileType man,gitcommit set nolist
+autocmd FileType man,gitcommit,diff set nolist
 
 autocmd BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd BufRead,BufNewFile *.markdown set ft=markdown
@@ -72,8 +72,8 @@ autocmd BufRead,BufNewFile *.asd set ft=lisp
 
 autocmd BufRead,BufNewFile valgrind*.log set ft=valgrind
 
-au BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
-au BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
+autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
+autocmd BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 
 let c_no_curly_error=1
 
