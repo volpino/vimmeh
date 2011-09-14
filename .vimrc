@@ -157,11 +157,10 @@ autocmd VimEnter * call Arpeggios()
 function Arpeggios()
 	Arpeggio inoremap jk <ESC>
 	Arpeggio inoremap kl <CR>
+
 	Arpeggio inoremap ui <BS>
 	Arpeggio inoremap io <DEL>
 
-	Arpeggio inoremap fh <C-O>h
-	Arpeggio inoremap fj <C-O>j
-	Arpeggio inoremap fk <C-O>k
-	Arpeggio inoremap fl <C-O>l
+	Arpeggio inoremap ji <C-O>^
+	Arpeggio inoremap ko <C-O>$
 endfunction
