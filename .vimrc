@@ -2,7 +2,7 @@ set nocompatible
 runtime macros/matchit.vim
 
 filetype off
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 syntax on
 filetype plugin indent on
