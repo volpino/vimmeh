@@ -145,8 +145,8 @@ imap <silent> <C--> :wincmd -<CR>
 map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
 
-" Signs
-let g:syntastic_enable_signs=1
+" Syntastic
+let g:syntastic_enable_signs = 1
 
 " Other
 set sr fo=roqm1 tw=72
@@ -156,6 +156,7 @@ autocmd VimEnter * call Arpeggios()
 
 function Arpeggios()
 	Arpeggio inoremap jk <ESC>
+	Arpeggio inoremap kl <CR>
 	Arpeggio inoremap ui <BS>
 	Arpeggio inoremap io <DEL>
 
