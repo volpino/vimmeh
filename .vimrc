@@ -144,7 +144,7 @@ imap <silent> <C--> :wincmd -<CR>
 " File handling
 map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
-map TT :CommandTFlush<CR>
+map FT :CommandTFlush<CR>
 
 " Syntastic
 let g:syntastic_enable_signs = 1
