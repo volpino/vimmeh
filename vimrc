@@ -62,7 +62,7 @@ set wildmenu
 
 " Conditional stuff
 autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd FileType man,gitcommit,diff set nolist
+autocmd FileType man,gitcommit,diff,mail set nolist
 
 autocmd BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd BufRead,BufNewFile *.markdown set ft=markdown

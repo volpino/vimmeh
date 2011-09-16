@@ -14,6 +14,6 @@ git submodule foreach --recursive git submodule update
 To use it this just do:
 
 ```sh
-ln -s /path/to/this/repo/.vimrc ~/.vimrc
-ln -s /path/to/this/repo/.vim ~/.vim
+ln -s /path/to/this/repo/vimrc ~/.vimrc
+ln -s /path/to/this/repo ~/.vim
 ```
