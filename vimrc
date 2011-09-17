@@ -40,15 +40,15 @@ set hlsearch
 set incsearch
 set sidescroll=1
 set nowrap
-set listchars=tab:└─,trail:░,eol:·,extends:»,precedes:«
+set listchars=tab:·\ ,trail:░,extends:»,precedes:«
 set list
 
 set autoindent
 set smartindent
 set smarttab
 set smartcase
-set shiftwidth=2
-set ts=2
+set shiftwidth=4
+set ts=4
 set noexpandtab
 
 set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]
@@ -75,7 +75,8 @@ autocmd BufRead,BufNewFile valgrind*.log set ft=valgrind
 autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
 autocmd BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 
-let c_no_curly_error=1
+let c_no_curly_error   = 1
+let g:localrc_filename = '.lvimrc'
 
 " Commands
 command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | xclip
