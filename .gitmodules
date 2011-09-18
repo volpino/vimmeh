@@ -85,6 +85,3 @@
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
-[submodule "bundle/repl"]
-	path = bundle/repl
-	url = git://github.com/ujihisa/repl.vim.git
