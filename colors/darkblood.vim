@@ -66,6 +66,8 @@ if v:version >= 700
     au InsertLeave * hi StatusLine term=none cterm=none ctermfg=black ctermbg=darkred
 endif
 
+hi ExtraWhitespace term=underline cterm=underline ctermfg=none ctermbg=none
+
 " Taglist
 hi TagListFileName term=none cterm=none ctermfg=darkred ctermbg=none
 

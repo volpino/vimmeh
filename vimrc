@@ -40,8 +40,6 @@ set hlsearch
 set incsearch
 set sidescroll=1
 set nowrap
-set listchars=tab:·\ ,trail:░,extends:»,precedes:«
-set list
 
 set autoindent
 set smartindent
@@ -59,6 +57,11 @@ set showmode ruler
 
 set wildmode=longest:full
 set wildmenu
+
+" make stuff more understandable
+mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
+set listchars=tab:·\ ,trail:░,extends:»,precedes:«
+set list
 
 " Conditional stuff
 autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
