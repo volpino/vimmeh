@@ -36,7 +36,7 @@ hi WildMenu      term=none      cterm=none      ctermfg=white     ctermbg=none
 hi DiffAdd       term=none      cterm=none      ctermfg=white     ctermbg=darkgreen
 hi DiffChange    term=underline cterm=underline ctermfg=none      ctermbg=none
 hi DiffDelete    term=none      cterm=none      ctermfg=white     ctermbg=darkred
-hi DiffText      term=none      cterm=none      ctermfg=black     ctermbg=darkred
+hi DiffText      term=none      cterm=none      ctermfg=white     ctermbg=none
 hi SignColumn    term=none      cterm=none      ctermfg=darkred   ctermbg=none
 hi StatusLine    term=underline cterm=underline ctermfg=black     ctermbg=darkred
 hi StatusLineNC  term=underline cterm=underline ctermfg=white     ctermbg=none
