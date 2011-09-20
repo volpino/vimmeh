@@ -157,8 +157,7 @@ let g:syntastic_enable_signs = 1
 set sr fo=roqm1 tw=72
 im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
 
-autocmd VimEnter * call Arpeggios()
-
+"autocmd VimEnter * call Arpeggios()
 function Arpeggios()
 	Arpeggio inoremap jk <ESC>
 	Arpeggio inoremap kl <CR>
