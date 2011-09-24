@@ -78,9 +78,6 @@ autocmd BufRead,BufNewFile valgrind*.log set ft=valgrind
 autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
 autocmd BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
 
-let c_no_curly_error   = 1
-let g:localrc_filename = '.lvimrc'
-
 " Commands
 command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | xclip
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
@@ -88,9 +85,6 @@ command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 " Mappings
 nnoremap <C-T> :TlistAddFilesRecursive .<CR>:TlistSessionSave .session<CR>
 nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
-
-map <C-C> :redraw!<CR>
-imap <C-C> :redraw!<CR>
 
 map <C-F> :mksession! .vim.session<CR>
 imap <C-F> <C-O>:mksession! .vim.session<CR>
@@ -109,8 +103,6 @@ map <silent> <PageUp> 1000<C-U>
 map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
-
-map <C-W> <Nop>
 
 " Tabs
 map <silent> <C-T> :tabnew<CR>
@@ -156,6 +148,9 @@ let g:syntastic_enable_signs = 1
 " Other
 set sr fo=roqm1 tw=72
 im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
+
+let c_no_curly_error   = 1
+let g:localrc_filename = '.lvimrc'
 
 "autocmd VimEnter * call Arpeggios()
 function Arpeggios()
