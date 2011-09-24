@@ -90,6 +90,9 @@ nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
 map <C-F> :mksession! .vim.session<CR>
 imap <C-F> <C-O>:mksession! .vim.session<CR>
 
+imap <C-Q> <C-O>{<C-O>gq}
+map <C-Q> {gq}
+
 imap <C-z> <C-O>u<CR>
 map <C-z> u<CR>
 imap <C-y> <C-O><C-R><CR>
@@ -156,10 +159,6 @@ au VimEnter * vmap <Tab> <Esc>
 
 " Syntastic
 let g:syntastic_enable_signs = 1
-
-" Other
-set sr fo=roqm1 tw=72
-im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
 
 let c_no_curly_error   = 1
 let g:localrc_filename = '.lvimrc'
