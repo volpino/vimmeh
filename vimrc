@@ -91,8 +91,7 @@ nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
 map <C-F> :mksession! .vim.session<CR>
 imap <C-F> <C-O>:mksession! .vim.session<CR>
 
-imap <C-Q> <C-O>{<C-O>gq}
-map <C-Q> {gq}
+map RE gq}
 
 imap <C-z> <C-O>u<CR>
 map <C-z> u<CR>
