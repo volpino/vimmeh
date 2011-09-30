@@ -67,7 +67,7 @@ set list
 
 " Conditional stuff
 autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd FileType man,gitcommit,diff,mail,objdasm set nolist
+autocmd FileType man,gitcommit,diff,mail,objdasm,pdf set nolist
 
 autocmd BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd BufRead,BufNewFile *.markdown set ft=markdown
@@ -79,6 +79,7 @@ autocmd BufRead,BufNewFile valgrind*.log set ft=valgrind
 
 autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
 autocmd BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
+autocmd BufReadPost *.pdf silent %!pdftotext -layout -nopgbrk "%" -
 
 " Commands
 command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | xclip
