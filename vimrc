@@ -67,7 +67,7 @@ set list
 
 " Conditional stuff
 autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd FileType man,gitcommit,diff,mail,objdasm,pdf set nolist
+autocmd FileType man,gitcommit,diff,mail,objdasm,pdf set nolist nonu
 
 autocmd BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd BufRead,BufNewFile *.markdown set ft=markdown
