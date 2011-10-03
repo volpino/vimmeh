@@ -65,22 +65,6 @@ mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
 set listchars=tab:·\ ,trail:░,extends:»,precedes:«
 set list
 
-" Conditional stuff
-autocmd FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd FileType man,gitcommit,diff,mail,objdasm,pdf set nolist nonu
-
-autocmd BufRead,BufNewFile *.rbuild set ft=ruby
-autocmd BufRead,BufNewFile *.markdown set ft=markdown
-autocmd BufRead,BufNewFile *.yml set ft=yaml
-autocmd BufRead,BufNewFile *.asciidoc set ft=asciidoc
-autocmd BufRead,BufNewFile *.asd set ft=lisp
-
-autocmd BufRead,BufNewFile valgrind*.log set ft=valgrind
-
-autocmd BufReadCmd *.docx,*.xlsx,*.pptx call zip#Browse(expand("<amatch>"))
-autocmd BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Browse(expand("<amatch>"))
-autocmd BufReadPost *.pdf silent %!pdftotext -layout -nopgbrk "%" -
-
 " Commands
 command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | xclip
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>

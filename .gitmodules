@@ -94,3 +94,6 @@
 [submodule "plugins/delimitMate"]
 	path = plugins/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "plugins/JSON"]
+	path = plugins/JSON
+	url = git://github.com/vim-scripts/JSON.vim.git
