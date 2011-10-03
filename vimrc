@@ -86,6 +86,11 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+
 nnoremap <C-T> :TlistAddFilesRecursive .<CR>:TlistSessionSave .session<CR>
 nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
 

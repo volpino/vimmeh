@@ -91,3 +91,6 @@
 [submodule "plugins/nerdcommenter"]
 	path = plugins/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "plugins/delimitMate"]
+	path = plugins/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
