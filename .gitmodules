@@ -85,3 +85,9 @@
 [submodule "plugins/textobj-rubyblock"]
 	path = plugins/textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "plugins/surround"]
+	path = plugins/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "plugins/nerdcommenter"]
+	path = plugins/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
