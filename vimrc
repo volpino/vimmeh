@@ -70,11 +70,6 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
-cmap W w
-cmap WQ wq
-cmap wQ wq
-cmap Q q
-
 nnoremap <C-T> :TlistAddFilesRecursive .<CR>:TlistSessionSave .session<CR>
 nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
 
@@ -153,8 +148,15 @@ let g:syntastic_enable_signs = 1
 let c_no_curly_error   = 1
 let g:localrc_filename = '.lvimrc'
 
-"autocmd VimEnter * call Arpeggios()
-function Arpeggios()
+autocmd VimEnter * call DoAliases()
+function DoAliases()
+	Alias W  w
+	Alias Wq wq
+	Alias Q  q
+endfunction
+
+"autocmd VimEnter * call DoArpeggios()
+function DoArpeggios()
 	Arpeggio inoremap jk <ESC>
 	Arpeggio inoremap kl <CR>
 

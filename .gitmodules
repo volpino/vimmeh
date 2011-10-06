@@ -97,3 +97,6 @@
 [submodule "plugins/JSON"]
 	path = plugins/JSON
 	url = git://github.com/vim-scripts/JSON.vim.git
+[submodule "plugins/cmdalias"]
+	path = plugins/cmdalias
+	url = git://github.com/vim-scripts/cmdalias.vim.git
