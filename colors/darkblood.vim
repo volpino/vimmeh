@@ -50,6 +50,7 @@ hi PmenuSbar     term=none      cterm=none      ctermfg=white     ctermbg=darkre
 hi Folded        term=none      cterm=none      ctermfg=darkred   ctermbg=none
 hi FoldColumn    term=none      cterm=none      ctermfg=darkred   ctermbg=none
 hi MatchParen    term=reverse   cterm=reverse   ctermfg=none      ctermbg=none
+hi ColorColumn   term=none      cterm=none      ctermfg=white     ctermbg=darkred
 
 if &term =~ "linux"
     hi TabLine       term=none cterm=none ctermfg=white ctermbg=none

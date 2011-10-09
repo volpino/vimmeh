@@ -24,6 +24,17 @@ set pastetoggle=<F2>
 nnoremap <F3> :set invcul cul?<CR>
 imap <F3> <C-O>:set invcul cul?<CR>
 
+nnoremap <F4> :call ColorColumnToggle()<CR>
+imap <F4> <C-O>:call ColorColumnToggle()<CR>
+
+function ColorColumnToggle()
+	if &colorcolumn
+		set colorcolumn=
+	else
+		set colorcolumn=80
+	endif
+endfunction
+
 set mouse=c
 set directory=~/.tmp
 set noerrorbells
@@ -47,8 +58,8 @@ set smartindent
 set smarttab
 set ignorecase
 set smartcase
-set shiftwidth=4
-set ts=4
+set shiftwidth=2
+set ts=2
 set noexpandtab
 
 set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]
