@@ -41,7 +41,8 @@ hi SignColumn    term=none      cterm=none      ctermfg=darkred   ctermbg=none
 hi StatusLine    term=underline cterm=underline ctermfg=black     ctermbg=darkred
 hi StatusLineNC  term=underline cterm=underline ctermfg=white     ctermbg=none
 hi VertSplit     term=none      cterm=none      ctermfg=darkred   ctermbg=none
-hi CursorColumn  term=none      cterm=none      ctermfg=darkred   ctermbg=none
+hi CursorColumn  term=underline cterm=none      ctermfg=none      ctermbg=none
+hi CursorLine    term=underline cterm=none      ctermfg=none      ctermbg=none
 hi Cursor        term=none      cterm=none      ctermfg=white     ctermbg=darkred
 hi Title         term=bold      cterm=bold      ctermfg=white     ctermbg=none
 hi Pmenu         term=none      cterm=none      ctermfg=darkred   ctermbg=none

@@ -24,8 +24,11 @@ set pastetoggle=<F2>
 nnoremap <F3> :set invcul cul?<CR>
 imap <F3> <C-O>:set invcul cul?<CR>
 
-nnoremap <F4> :call ColorColumnToggle()<CR>
-imap <F4> <C-O>:call ColorColumnToggle()<CR>
+nnoremap <F4> :set invcursorcolumn cursorcolumn?<CR>
+imap <F4> <C-O>:set invcursorcolumn cursorcolumn?<CR>
+
+nnoremap <F5> :call ColorColumnToggle()<CR>
+imap <F5> <C-O>:call ColorColumnToggle()<CR>
 
 function ColorColumnToggle()
 	if &colorcolumn
