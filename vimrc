@@ -40,9 +40,12 @@ endfunction
 
 set mouse=c
 set directory=~/.tmp
+set backupdir=~/.tmp
 set noerrorbells
 set novisualbell
 set magic
+set hidden
+set shortmess=atI
 
 set fileencodings=utf-8,latin1
 set encoding=utf-8
@@ -50,10 +53,11 @@ set termencoding=utf-8
 set guifont=Terminus\ 8
 
 set helplang=en
-set history=200
+set history=1000
 set hlsearch
 set incsearch
 set sidescroll=1
+set scrolloff=3
 set nowrap
 
 set autoindent
