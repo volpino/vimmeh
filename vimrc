@@ -94,9 +94,6 @@ nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
 map <C-F> :mksession! .vim.session<CR>
 imap <C-F> <C-O>:mksession! .vim.session<CR>
 
-map <C-B> :Unite buffer<CR>
-imap <C-B> <C-O>:Unite buffer<CR>
-
 map RE gq}
 
 imap <C-z> <C-O>u<CR>
@@ -151,6 +148,7 @@ imap <silent> <C--> :wincmd -<CR>
 map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
 map FT :CommandTFlush<CR>
+map B :CommandTBuffer<CR>
 
 " Better ESC
 nnoremap <Tab> <Esc>
