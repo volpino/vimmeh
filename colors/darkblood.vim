@@ -33,6 +33,9 @@ hi ModeMsg       term=bold      cterm=bold      ctermfg=none      ctermbg=none
 hi Question      term=none      cterm=none      ctermfg=darkgreen ctermbg=none
 hi WarningMsg    term=none      cterm=none      ctermfg=darkred   ctermbg=none
 hi WildMenu      term=none      cterm=none      ctermfg=white     ctermbg=none
+hi TabLine       term=underline cterm=underline ctermfg=white     ctermbg=none
+hi TabLineSel    term=underline cterm=underline ctermfg=white     ctermbg=darkred
+hi TabLineFill   term=underline cterm=underline ctermfg=white     ctermbg=none
 hi DiffAdd       term=none      cterm=none      ctermfg=white     ctermbg=darkgreen
 hi DiffChange    term=underline cterm=underline ctermfg=none      ctermbg=none
 hi DiffDelete    term=none      cterm=none      ctermfg=white     ctermbg=darkred
@@ -54,18 +57,16 @@ hi MatchParen    term=reverse   cterm=reverse   ctermfg=none      ctermbg=none
 hi ColorColumn   term=none      cterm=none      ctermfg=white     ctermbg=darkred
 
 if &term =~ "linux"
-    hi TabLine       term=none cterm=none ctermfg=white ctermbg=none
-    hi TabLineSel    term=none cterm=none ctermfg=white ctermbg=darkred
-    hi TabLineFill   term=none cterm=none ctermfg=white ctermbg=none
-else
-    hi TabLine       term=underline cterm=underline ctermfg=white ctermbg=none
-    hi TabLineSel    term=underline cterm=underline ctermfg=white ctermbg=darkred
-    hi TabLineFill   term=underline cterm=underline ctermfg=white ctermbg=none
+	hi TabLine       term=none cterm=none ctermfg=white ctermbg=none
+	hi TabLineSel    term=none cterm=none ctermfg=white ctermbg=darkred
+	hi TabLineFill   term=none cterm=none ctermfg=white ctermbg=none
+	hi StatusLine    term=none cterm=none ctermfg=black ctermbg=darkred
+	hi StatusLineNC  term=none cterm=none ctermfg=white ctermbg=none
 endif
 
 if v:version >= 700
-    au InsertEnter * hi StatusLine term=none cterm=none ctermfg=white ctermbg=darkred
-    au InsertLeave * hi StatusLine term=none cterm=none ctermfg=black ctermbg=darkred
+	au InsertEnter * hi StatusLine term=none cterm=none ctermfg=white ctermbg=darkred
+	au InsertLeave * hi StatusLine term=none cterm=none ctermfg=black ctermbg=darkred
 endif
 
 hi ExtraWhitespace term=underline cterm=underline ctermfg=none ctermbg=none
