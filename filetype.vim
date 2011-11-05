@@ -1,5 +1,5 @@
-autocmd! FileType lisp,ruby,yaml,javascript,haml,scss,mkd Indentation 2
-autocmd! FileType man,git,gitcommit,diff,mail,objdasm,pdf set nolist nonu
+autocmd! FileType lisp,ruby,yaml,javascript,haml,scss Indentation 2
+autocmd! FileType markdown,man,git,gitcommit,diff,mail,objdasm,pdf set nolist nonu
 
 autocmd! BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd! BufRead,BufNewFile *.markdown set ft=markdown
