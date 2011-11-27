@@ -41,6 +41,7 @@ endfunction
 set mouse=c
 set directory=~/.tmp
 set backupdir=~/.tmp
+set backup
 set noerrorbells
 set novisualbell
 set magic
@@ -101,6 +102,10 @@ imap <C-z> <C-O>u<CR>
 map <C-z> u<CR>
 imap <C-y> <C-O><C-R><CR>
 map <C-y> <C-R><CR>
+
+map <F1> <Nop>
+imap <F1> <Nop>
+vmap <F1> <Nop>
 
 imap <silent> <C-H> <C-O>h<CR>
 imap <silent> <C-K> <C-O>k<CR>
