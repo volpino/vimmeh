@@ -100,3 +100,6 @@
 [submodule "plugins/cmdalias"]
 	path = plugins/cmdalias
 	url = git://github.com/vim-scripts/cmdalias.vim.git
+[submodule "plugins/clang_complete"]
+	path = plugins/clang_complete
+	url = git://github.com/Rip-Rip/clang_complete.git
