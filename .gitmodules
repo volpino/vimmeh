@@ -103,3 +103,9 @@
 [submodule "plugins/clang_complete"]
 	path = plugins/clang_complete
 	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule "plugins/haskell-conceal"]
+	path = plugins/haskell-conceal
+	url = git://github.com/vim-scripts/Haskell-Conceal.git
+[submodule "plugins/haskell"]
+	path = plugins/haskell
+	url = git://github.com/vim-scripts/haskell.vim.git
