@@ -90,9 +90,6 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
-nnoremap <C-T> :TlistAddFilesRecursive .<CR>:TlistSessionSave .session<CR>
-nnoremap t :TlistToggle<CR>:TlistSessionLoad .session<CR>
-
 map <C-F> :mksession! .vim.session<CR>
 imap <C-F> <C-O>:mksession! .vim.session<CR>
 
@@ -155,6 +152,9 @@ map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
 map FT :CommandTFlush<CR>
 map B :CommandTBuffer<CR>
+map t :TaskList<CR>
+map U :GundoToggle<CR>
+
 
 " Better ESC
 nnoremap <Tab> <Esc>

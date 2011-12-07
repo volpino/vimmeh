@@ -109,3 +109,9 @@
 [submodule "plugins/haskell"]
 	path = plugins/haskell
 	url = git://github.com/vim-scripts/haskell.vim.git
+[submodule "plugins/gundo"]
+	path = plugins/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "plugins/tasklist"]
+	path = plugins/tasklist
+	url = https://github.com/vim-scripts/TaskList.vim.git
