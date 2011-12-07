@@ -16,3 +16,5 @@ autocmd! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Bro
 autocmd! BufReadPost *.pdf silent %!pdftotext -layout -nopgbrk "%" -
 
 autocmd! BufRead,BufNewFile *.json set filetype=json
+
+autocmd! FileType c let g:SuperTabDefaultCompletionType = "<C-x><C-u>"

@@ -115,3 +115,6 @@
 [submodule "plugins/tasklist"]
 	path = plugins/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule "plugins/supertab"]
+	path = plugins/supertab
+	url = git://github.com/ervandew/supertab.git
