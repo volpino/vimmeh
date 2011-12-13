@@ -1,13 +1,13 @@
 autocmd! FileType lisp,ruby,yaml,javascript,haml,scss Indentation 2
 autocmd! FileType markdown,man,git,gitcommit,diff,mail,objdasm,pdf set nolist nonu
 autocmd! FileType haml,scss set noexpandtab
-autocmd! FileType haskell set expandtab
+autocmd! FileType haskell,lisp set expandtab
 
 autocmd! BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd! BufRead,BufNewFile *.markdown set ft=markdown
 autocmd! BufRead,BufNewFile *.yml set ft=yaml
 autocmd! BufRead,BufNewFile *.asciidoc set ft=asciidoc
-autocmd! BufRead,BufNewFile *.asd set ft=lisp
+autocmd! BufRead,BufNewFile *.asd,*.cic set ft=lisp
 
 autocmd! BufRead,BufNewFile valgrind*.log set ft=valgrind
 
