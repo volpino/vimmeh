@@ -172,6 +172,10 @@ let g:syntastic_enable_signs = 1
 let c_no_curly_error   = 1
 let g:localrc_filename = '.lvimrc'
 
+" Command-T
+let g:CommandTMaxFiles=100000
+let g:CommandTMaxDepth=100
+
 autocmd VimEnter * call DoAliases()
 function DoAliases()
 	Alias W  w
