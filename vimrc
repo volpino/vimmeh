@@ -71,7 +71,7 @@ set ts=2
 set noexpandtab
 set modeline
 
-set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]
+set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]\ %{fugitive#statusline()}
 set laststatus=2
 
 set number
