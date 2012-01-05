@@ -115,3 +115,6 @@
 [submodule "plugins/supertab"]
 	path = plugins/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "plugins/clojure"]
+	path = plugins/clojure
+	url = git://github.com/vim-scripts/VimClojure.git
