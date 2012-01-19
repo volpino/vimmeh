@@ -1,7 +1,7 @@
 set nocompatible
 runtime macros/matchit.vim
 
-filetype off
+filetype plugin on
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 syntax on
@@ -29,6 +29,10 @@ imap <F4> <C-O>:set invcursorcolumn cursorcolumn?<CR>
 
 nnoremap <F5> :call ColorColumnToggle()<CR>
 imap <F5> <C-O>:call ColorColumnToggle()<CR>
+
+nnoremap <F11> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+noremap ,n :NERDTreeToggle<CR>
 
 function ColorColumnToggle()
 	if &colorcolumn
@@ -63,12 +67,12 @@ set nowrap
 
 set autoindent
 set smartindent
-set smarttab
+"set smarttab
 set ignorecase
 set smartcase
-set shiftwidth=2
+"set shiftwidth=2
 set ts=2
-set noexpandtab
+"set noexpandtab
 set modeline
 
 set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]\ %{fugitive#statusline()}
@@ -81,9 +85,10 @@ set wildmode=longest:full
 set wildmenu
 
 " make stuff more understandable
-mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
+"mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
 set listchars=tab:·\ ,trail:░,extends:»,precedes:«
 set list
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Commands
 command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http://sprunge.us | head -n 1 | tr -d '\r\n ' | xclip
@@ -157,14 +162,14 @@ map U :GundoToggle<CR>
 
 
 " Better ESC
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
-au VimEnter * map <Tab> <Esc>
-au VimEnter * imap <Tab> <Esc>
-au VimEnter * vmap <Tab> <Esc>
+"nnoremap <Tab> <Esc>
+"vnoremap <Tab> <Esc>gV
+"onoremap <Tab> <Esc>
+"inoremap <Tab> <Esc>`^
+"inoremap <Leader><Tab> <Tab>
+"au VimEnter * map <Tab> <Esc>
+"au VimEnter * imap <Tab> <Esc>
+"au VimEnter * vmap <Tab> <Esc>
 
 " Syntastic
 let g:syntastic_enable_signs = 1
@@ -195,3 +200,21 @@ function DoArpeggios()
 	Arpeggio inoremap ji <C-O>^
 	Arpeggio inoremap ko <C-O>$
 endfunction
+
+autocmd FileType css setlocal sw=4 sts=4 et
+autocmd FileType eruby setlocal sw=2 sts=2 et
+autocmd FileType haskell setlocal sw=4 sts=4 et
+autocmd FileType htmlcheetah setlocal sw=2 sts=2 et
+autocmd FileType html setlocal sw=2 sts=2 et
+autocmd FileType xhtml setlocal sw=2 sts=2 et
+autocmd FileType javascript setlocal sw=2 sts=2 et
+autocmd FileType java setlocal sw=4 sts=4 et
+autocmd FileType mason setlocal sw=2 sts=2 et
+autocmd FileType ocaml setlocal sw=2 sts=2 et
+autocmd FileType perl setlocal sw=4 sts=4 et
+autocmd FileType php setlocal sw=4 sts=4 et
+autocmd FileType python setlocal sw=4 sts=4 et tw=72
+autocmd FileType ruby setlocal sw=2 sts=2 et
+autocmd FileType scheme setlocal sw=2 sts=2 et
+autocmd FileType sql setlocal et
+autocmd FileType text setlocal sw=2 sts=2 et tw=79
