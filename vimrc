@@ -81,7 +81,7 @@ set wildmode=longest:full
 set wildmenu
 
 " make stuff more understandable
-mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
+"mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
 set listchars=tab:·\ ,trail:░,extends:»,precedes:«
 set list
 

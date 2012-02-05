@@ -1,7 +1,8 @@
 autocmd! FileType lisp,ruby,yaml,javascript,haml,scss Indentation 2
 autocmd! FileType markdown,man,git,gitcommit,diff,mail,objdasm,pdf set nolist nonu
 autocmd! FileType haml,scss set noexpandtab
-autocmd! FileType haskell,lisp set expandtab
+autocmd! FileType haskell,lisp,markdown set expandtab
+autocmd! FileType c let g:SuperTabDefaultCompletionType = "<C-x><C-u>"
 
 autocmd! BufRead,BufNewFile *.rbuild set ft=ruby
 autocmd! BufRead,BufNewFile *.markdown set ft=markdown
@@ -16,5 +17,3 @@ autocmd! BufReadCmd *.odt,*.ott,*.ods,*.ots,*.odp,*.otp,*.odg,*.otg call zip#Bro
 autocmd! BufReadPost *.pdf silent %!pdftotext -layout -nopgbrk "%" -
 
 autocmd! BufRead,BufNewFile *.json set filetype=json
-
-autocmd! FileType c let g:SuperTabDefaultCompletionType = "<C-x><C-u>"
