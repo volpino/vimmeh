@@ -129,8 +129,8 @@ map <silent> <C-T> :tabnew<CR>
 map <silent> <C-W> :tabclose<CR>
 map <silent> <kPageUp> :tabprevious<CR>
 map <silent> <kPageDown> :tabnext<CR>
-map <silent> <S-H> :tabprevious<CR>
-map <silent> <S-L> :tabnext<CR>
+map <silent> <C-S-H> :tabprevious<CR>
+map <silent> <C-S-L> :tabnext<CR>
 imap <silent> <C-T> <C-O>:tabnew<CR>
 imap <silent> <C-W> <C-O>:tabclose<CR>
 imap <silent> <kPageUp> <C-O>:tabprevious<CR>
@@ -165,10 +165,9 @@ imap <silent> <C--> :wincmd -<CR>
 map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
 map FT :CommandTFlush<CR>
-map B :CommandTBuffer<CR>
+map Q :CommandTBuffer<CR>
 map t :TaskList<CR>
 map U :GundoToggle<CR>
-
 
 " Better ESC
 nnoremap <Tab> <Esc>
