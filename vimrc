@@ -114,6 +114,16 @@ map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
 
+" Disable arrows to learn to stop using them
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
 " Tabs
 map <silent> <C-T> :tabnew<CR>
 map <silent> <C-W> :tabclose<CR>
@@ -129,10 +139,10 @@ map <silent> <C-H> :tabfirst<CR>
 imap <silent> <C-H> <C-O>:tabfirst<CR>
 
 " Windows
-map <silent> <C-Left> :wincmd h<CR>
-map <silent> <C-Up> :wincmd k<CR>
-map <silent> <C-Right> :wincmd l<CR>
-map <silent> <C-Down> :wincmd j<CR>
+"map <silent> <C-Left> :wincmd h<CR>
+"map <silent> <C-Up> :wincmd k<CR>
+"map <silent> <C-Right> :wincmd l<CR>
+"map <silent> <C-Down> :wincmd j<CR>
 map <silent> <C-H> :wincmd h<CR>
 map <silent> <C-K> :wincmd k<CR>
 map <silent> <C-L> :wincmd l<CR>
@@ -140,10 +150,14 @@ map <silent> <C-J> :wincmd j<CR>
 map <silent> <C-+> :wincmd +<CR>
 map <silent> <C--> :wincmd -<CR>
 
-imap <silent> <C-Left> <C-O>:wincmd h<CR>
-imap <silent> <C-Up> <C-O>:wincmd k<CR>
-imap <silent> <C-Right> <C-O>:wincmd l<CR>
-imap <silent> <C-Down> <C-O>:wincmd j<CR>
+"imap <silent> <C-Left> <C-O>:wincmd h<CR>
+"imap <silent> <C-Up> <C-O>:wincmd k<CR>
+"imap <silent> <C-Right> <C-O>:wincmd l<CR>
+"imap <silent> <C-Down> <C-O>:wincmd j<CR>
+imap <silent> <C-H> :wincmd h<CR>
+imap <silent> <C-K> :wincmd k<CR>
+imap <silent> <C-L> :wincmd l<CR>
+imap <silent> <C-J> :wincmd j<CR>
 imap <silent> <C-+> :wincmd +<CR>
 imap <silent> <C--> :wincmd -<CR>
 
@@ -175,6 +189,10 @@ let g:localrc_filename = '.lvimrc'
 " Command-T
 let g:CommandTMaxFiles=100000
 let g:CommandTMaxDepth=100
+
+" cctree
+let g:CCTreeUsePerl = 1
+let g:CCTreeUseUTF8Symbols = 1
 
 autocmd VimEnter * call DoAliases()
 function DoAliases()
