@@ -47,7 +47,7 @@ set novisualbell
 set magic
 set hidden
 set shortmess=atI
-let mapleader="ì"
+let mapleader="ò"
 
 set fileencodings=utf-8,latin1
 set encoding=utf-8
@@ -162,6 +162,7 @@ imap <silent> <C--> :wincmd -<CR>
 map <Leader>N :NERDTreeToggle<CR>
 map <Leader>T :CommandT<CR>
 map <Leader>B :CommandTBuffer<CR>
+map <Leader>F :CommandTFlush<CR>
 map <Leader>U :GundoToggle<CR>
 
 " Better ESC
@@ -169,7 +170,6 @@ nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
 inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
 au VimEnter * map <Tab> <Esc>
 au VimEnter * imap <Tab> <Esc>
 au VimEnter * vmap <Tab> <Esc>
