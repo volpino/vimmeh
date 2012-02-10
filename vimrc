@@ -47,6 +47,7 @@ set novisualbell
 set magic
 set hidden
 set shortmess=atI
+let mapleader="ì"
 
 set fileencodings=utf-8,latin1
 set encoding=utf-8
@@ -70,6 +71,8 @@ set shiftwidth=2
 set ts=2
 set noexpandtab
 set modeline
+set tildeop
+set cpoptions+=$
 
 set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]\ %{fugitive#statusline()}
 set laststatus=2
@@ -90,15 +93,9 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
-map <C-F> :mksession! .vim.session<CR>
-imap <C-F> <C-O>:mksession! .vim.session<CR>
+command Save silent mksession! .vim.session
 
 map RE gq}
-
-imap <C-z> <C-O>u<CR>
-map <C-z> u<CR>
-imap <C-y> <C-O><C-R><CR>
-map <C-y> <C-R><CR>
 
 map <F1> <Nop>
 imap <F1> <Nop>
@@ -129,8 +126,8 @@ map <silent> <C-T> :tabnew<CR>
 map <silent> <C-W> :tabclose<CR>
 map <silent> <kPageUp> :tabprevious<CR>
 map <silent> <kPageDown> :tabnext<CR>
-map <silent> <C-S-H> :tabprevious<CR>
-map <silent> <C-S-L> :tabnext<CR>
+map <silent> <Leader>H :tabprevious<CR>
+map <silent> <Leader>L :tabnext<CR>
 imap <silent> <C-T> <C-O>:tabnew<CR>
 imap <silent> <C-W> <C-O>:tabclose<CR>
 imap <silent> <kPageUp> <C-O>:tabprevious<CR>
@@ -162,12 +159,10 @@ imap <silent> <C-+> :wincmd +<CR>
 imap <silent> <C--> :wincmd -<CR>
 
 " File handling
-map N :NERDTreeToggle<CR>
-map T :CommandT<CR>
-map FT :CommandTFlush<CR>
-map Q :CommandTBuffer<CR>
-map t :TaskList<CR>
-map U :GundoToggle<CR>
+map <Leader>N :NERDTreeToggle<CR>
+map <Leader>T :CommandT<CR>
+map <Leader>B :CommandTBuffer<CR>
+map <Leader>U :GundoToggle<CR>
 
 " Better ESC
 nnoremap <Tab> <Esc>
@@ -212,3 +207,4 @@ function DoArpeggios()
 	Arpeggio inoremap ji <C-O>^
 	Arpeggio inoremap ko <C-O>$
 endfunction
+
