@@ -93,8 +93,6 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
-command Save silent mksession! .vim.session
-
 map RE gq}
 
 map <F1> <Nop>
@@ -164,6 +162,7 @@ map <Leader>T :CommandT<CR>
 map <Leader>B :CommandTBuffer<CR>
 map <Leader>F :CommandTFlush<CR>
 map <Leader>U :GundoToggle<CR>
+map <Leader>S :mksession! .vim.session<CR>
 
 " Better ESC
 nnoremap <Tab> <Esc>
