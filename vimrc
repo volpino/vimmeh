@@ -8,7 +8,7 @@ syntax on
 filetype plugin indent on
 set ofu=syntaxcomplete#Complete
 
-colorscheme darkblood
+colorscheme evening
 
 " Fix keys
 if &term =~ "rxvt"
@@ -41,6 +41,7 @@ function ColorColumnToggle()
 		set colorcolumn=80
 	endif
 endfunction
+call ColorColumnToggle()
 
 set mouse=c
 set directory=~/.tmp
@@ -153,7 +154,7 @@ imap <silent> <C-+> :wincmd +<CR>
 imap <silent> <C--> :wincmd -<CR>
 
 " File handling
-map N :NERDTreeToggle<CR>
+"map N :NERDTreeToggle<CR>
 map T :CommandT<CR>
 map FT :CommandTFlush<CR>
 map B :CommandTBuffer<CR>
@@ -200,21 +201,3 @@ function DoArpeggios()
 	Arpeggio inoremap ji <C-O>^
 	Arpeggio inoremap ko <C-O>$
 endfunction
-
-autocmd FileType css setlocal sw=4 sts=4 et
-autocmd FileType eruby setlocal sw=2 sts=2 et
-autocmd FileType haskell setlocal sw=4 sts=4 et
-autocmd FileType htmlcheetah setlocal sw=2 sts=2 et
-autocmd FileType html setlocal sw=2 sts=2 et
-autocmd FileType xhtml setlocal sw=2 sts=2 et
-autocmd FileType javascript setlocal sw=2 sts=2 et
-autocmd FileType java setlocal sw=4 sts=4 et
-autocmd FileType mason setlocal sw=2 sts=2 et
-autocmd FileType ocaml setlocal sw=2 sts=2 et
-autocmd FileType perl setlocal sw=4 sts=4 et
-autocmd FileType php setlocal sw=4 sts=4 et
-autocmd FileType python setlocal sw=4 sts=4 et tw=72
-autocmd FileType ruby setlocal sw=2 sts=2 et
-autocmd FileType scheme setlocal sw=2 sts=2 et
-autocmd FileType sql setlocal et
-autocmd FileType text setlocal sw=2 sts=2 et tw=79
