@@ -142,19 +142,19 @@ map <silent> <C-H> :wincmd h<CR>
 map <silent> <C-K> :wincmd k<CR>
 map <silent> <C-L> :wincmd l<CR>
 map <silent> <C-J> :wincmd j<CR>
-map <silent> <C-+> :wincmd +<CR>
-map <silent> <C--> :wincmd -<CR>
+map <silent> <C-+> :resize +1<CR>
+map <silent> <C--> :resize -1<CR>
 
 "imap <silent> <C-Left> <C-O>:wincmd h<CR>
 "imap <silent> <C-Up> <C-O>:wincmd k<CR>
 "imap <silent> <C-Right> <C-O>:wincmd l<CR>
 "imap <silent> <C-Down> <C-O>:wincmd j<CR>
-imap <silent> <C-H> :wincmd h<CR>
-imap <silent> <C-K> :wincmd k<CR>
-imap <silent> <C-L> :wincmd l<CR>
-imap <silent> <C-J> :wincmd j<CR>
-imap <silent> <C-+> :wincmd +<CR>
-imap <silent> <C--> :wincmd -<CR>
+imap <silent> <C-O><C-H> :wincmd h<CR>
+imap <silent> <C-O><C-K> :wincmd k<CR>
+imap <silent> <C-O><C-L> :wincmd l<CR>
+imap <silent> <C-O><C-J> :wincmd j<CR>
+imap <silent> <C-O><C-+> :resize +1<CR>
+imap <silent> <C-O><C--> :resize -1<CR>
 
 " File handling
 map <Leader>N :NERDTreeToggle<CR>
