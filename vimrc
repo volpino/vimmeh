@@ -47,6 +47,7 @@ set novisualbell
 set magic
 set hidden
 set shortmess=atI
+set wildignore+=*.o,*.obj,.git
 let mapleader="ò"
 
 set fileencodings=utf-8,latin1
