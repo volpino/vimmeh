@@ -201,3 +201,7 @@ function DoArpeggios()
 	Arpeggio inoremap ji <C-O>^
 	Arpeggio inoremap ko <C-O>$
 endfunction
+
+let g:syntastic_python_checker="flake8"
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_jump=1

@@ -118,3 +118,6 @@
 [submodule "plugins/clojure"]
 	path = plugins/clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "plugins/vim-flake8"]
+	path = plugins/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
