@@ -52,6 +52,8 @@ set novisualbell
 set magic
 set hidden
 set shortmess=atI
+set wildignore+=*.o,*.obj,.git
+let mapleader="ò"
 
 set fileencodings=utf-8,latin1
 set encoding=utf-8
@@ -75,6 +77,8 @@ set smartcase
 set ts=2
 "set noexpandtab
 set modeline
+set tildeop
+set cpoptions+=$
 
 set statusline=%F%m%r%h%w\ [Type:\ %Y]\ [Lines:\ %L\ @\ %p%%\ {%l;%v}]\ %{fugitive#statusline()}
 set laststatus=2
@@ -86,7 +90,6 @@ set wildmode=longest:full
 set wildmenu
 
 " make stuff more understandable
-"mat ExtraWhitespace /^\t\+\zs \+\| \+\zs\t\+/
 set listchars=tab:·\ ,trail:░,extends:»,precedes:«
 set list
 autocmd BufWritePre * :%s/\s\+$//e
@@ -96,15 +99,7 @@ command -range=% Share silent <line1>,<line2>write !curl -s -F "sprunge=<-" http
 command -nargs=1 Indentation silent set ts=<args> shiftwidth=<args>
 
 " Mappings
-map <C-F> :mksession! .vim.session<CR>
-imap <C-F> <C-O>:mksession! .vim.session<CR>
-
 map RE gq}
-
-imap <C-z> <C-O>u<CR>
-map <C-z> u<CR>
-imap <C-y> <C-O><C-R><CR>
-map <C-y> <C-R><CR>
 
 map <F1> <Nop>
 imap <F1> <Nop>
@@ -120,13 +115,23 @@ map <silent> <PageDown> 1000<C-D>
 imap <silent> <PageUp> <C-O>1000<C-U>
 imap <silent> <PageDown> <C-O>1000<C-D>
 
+" Disable arrows to learn to stop using them
+"noremap <Up> <nop>
+"noremap <Down> <nop>
+"noremap <Left> <nop>
+"noremap <Right> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
+"inoremap <Left> <nop>
+"inoremap <Right> <nop>
+
 " Tabs
 map <silent> <C-T> :tabnew<CR>
 map <silent> <C-W> :tabclose<CR>
 map <silent> <kPageUp> :tabprevious<CR>
 map <silent> <kPageDown> :tabnext<CR>
-map <silent> <S-H> :tabprevious<CR>
-map <silent> <S-L> :tabnext<CR>
+map <silent> <Leader>H :tabprevious<CR>
+map <silent> <Leader>L :tabnext<CR>
 imap <silent> <C-T> <C-O>:tabnew<CR>
 imap <silent> <C-W> <C-O>:tabclose<CR>
 imap <silent> <kPageUp> <C-O>:tabprevious<CR>
@@ -139,28 +144,23 @@ map <silent> <C-Left> :wincmd h<CR>
 map <silent> <C-Up> :wincmd k<CR>
 map <silent> <C-Right> :wincmd l<CR>
 map <silent> <C-Down> :wincmd j<CR>
-map <silent> <C-H> :wincmd h<CR>
-map <silent> <C-K> :wincmd k<CR>
-map <silent> <C-L> :wincmd l<CR>
-map <silent> <C-J> :wincmd j<CR>
-map <silent> <C-+> :wincmd +<CR>
-map <silent> <C--> :wincmd -<CR>
+"map <silent> <C-H> :wincmd h<CR>
+"map <silent> <C-K> :wincmd k<CR>
+"map <silent> <C-L> :wincmd l<CR>
+"map <silent> <C-J> :wincmd j<CR>
+map <silent> <C-+> :resize +1<CR>
+map <silent> <C--> :resize -1<CR>
 
 imap <silent> <C-Left> <C-O>:wincmd h<CR>
 imap <silent> <C-Up> <C-O>:wincmd k<CR>
 imap <silent> <C-Right> <C-O>:wincmd l<CR>
 imap <silent> <C-Down> <C-O>:wincmd j<CR>
-imap <silent> <C-+> :wincmd +<CR>
-imap <silent> <C--> :wincmd -<CR>
-
-" File handling
-"map N :NERDTreeToggle<CR>
-map T :CommandT<CR>
-map FT :CommandTFlush<CR>
-map B :CommandTBuffer<CR>
-map t :TaskList<CR>
-map U :GundoToggle<CR>
-
+"imap <silent> <C-O><C-H> :wincmd h<CR>
+"imap <silent> <C-O><C-K> :wincmd k<CR>
+"imap <silent> <C-O><C-L> :wincmd l<CR>
+"imap <silent> <C-O><C-J> :wincmd j<CR>
+imap <silent> <C-O><C-+> :resize +1<CR>
+imap <silent> <C-O><C--> :resize -1<CR>
 
 " Better ESC
 "nnoremap <Tab> <Esc>
@@ -172,15 +172,30 @@ map U :GundoToggle<CR>
 "au VimEnter * imap <Tab> <Esc>
 "au VimEnter * vmap <Tab> <Esc>
 
+" File handling
+map <Leader>N :NERDTreeToggle<CR>
+map <Leader>T :CommandT<CR>
+map <Leader>B :CommandTBuffer<CR>
+map <Leader>F :CommandTFlush<CR>
+map <Leader>U :GundoToggle<CR>
+map <Leader>S :mksession! .vim.session<CR>
+
 " Syntastic
 let g:syntastic_enable_signs = 1
-
+let g:syntastic_python_checker="flake8"
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_jump=1
 let c_no_curly_error   = 1
+
 let g:localrc_filename = '.lvimrc'
 
 " Command-T
 let g:CommandTMaxFiles=100000
 let g:CommandTMaxDepth=100
+
+" cctree
+let g:CCTreeUsePerl = 1
+let g:CCTreeUseUTF8Symbols = 1
 
 autocmd VimEnter * call DoAliases()
 function DoAliases()
@@ -201,7 +216,3 @@ function DoArpeggios()
 	Arpeggio inoremap ji <C-O>^
 	Arpeggio inoremap ko <C-O>$
 endfunction
-
-let g:syntastic_python_checker="flake8"
-let g:syntastic_check_on_open=1
-let g:syntastic_auto_jump=1
